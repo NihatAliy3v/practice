@@ -1,0 +1,173 @@
+@import "./base";
+
+.todo{
+    padding-top: 100px;
+    .container{
+        .row{
+            .card{
+                width: 500px;
+                margin: 0 auto;
+                background-color: rgb(58, 98, 209);
+                border-radius: 10px;
+                padding: 20px;
+                .card-header{
+                    margin-bottom: 20px;
+                    display: flex;
+                    justify-content: center ;
+                    .title{
+                        color: #fff;
+                        font-size: 24px;
+                        font-weight: 500;
+                    }
+                }
+                .card-search{
+                    display: flex;
+                    justify-content: center;
+                    margin-bottom: 20px;
+                    form{
+                        width: 50%;
+                        height: 40px;
+                        background-color: #fff;
+                        display: flex;
+                        justify-content: space-between;
+                        border-radius: 10px;
+                        overflow: hidden;
+                        padding: 0 10px;
+                        align-items: center;
+                        input{
+                            width: 100%;
+                            border: none;
+                            outline: none;
+                            background-color: transparent;
+                        }
+                        .btn{
+                            border: none;
+                            outline: none;
+                            background-color: transparent;
+                        }
+                    }
+                }
+                .card-list{
+                    display: flex;
+                    justify-content: center;
+                    margin-bottom: 20px;
+                    .list{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 10px;
+                        width: 100%;
+                        .list-item{
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            height: 40px;
+                            background-color: #fff;
+                            border-radius: 10px; 
+                            padding: 0 5px;
+                            width: 70%;
+                            .left-group{
+                                input{
+                                    &:checked+label{
+                                        text-decoration:line-through;
+                                        opacity: .5;
+                                    }
+                                }
+                                label{
+                                    margin-left: 5px;
+                                }
+                            }
+                            .delete{
+                                height: 100%;
+                                display: flex;
+                                align-items: center;
+                                .btn{
+                                    background-color: transparent;
+                                    border: none;
+                                    outline: none;
+                                    color: red;
+                                    font-size: 14px;
+                                    cursor: pointer;
+                                    
+                                }
+                            }
+                        }
+                        .hidden{
+                            display: none;
+                        }
+                    }
+                }
+                .card-add{
+                    display: flex;
+                    justify-content: center;
+                    margin-bottom: 20px;
+                    form{
+                        height: 40px;
+                        width: 50%;
+                        display: flex;
+                        border-radius: 10px;
+                        overflow: hidden;
+                        input{
+                            padding: 0 10px;
+                            border: none;
+                            outline: none;
+                            width: 80%;
+                        }
+                        .btn{
+                            border: none;
+                            outline: none;
+                            height: 100%;
+                            background-color: aqua;
+                            width: 20%;
+                            cursor: pointer;
+                            font-size: 14px;
+                        }
+                    }
+                }
+                .card-display{
+                    display: flex;
+                    justify-content: center;
+                    gap: 5px;
+                    color: #fff;
+                }
+            }
+        }
+    }
+} 
+
+.dark-mode{
+    display: block;
+    width: 32px;
+    height: 32px;
+    background-color: black;
+    color: $primary-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    border-radius: 50%;
+    a{  
+        i{
+            font-size: 16px;
+        }
+    }
+    
+}
+
+body{
+    background-color: $primary-color;
+}
+body.dark{
+    background-color: $secondary-color;
+    .dark-mode{
+        background-color: $primary-color;
+        color: $secondary-color; 
+    }
+}
+
+
+
+
+
